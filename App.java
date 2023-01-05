@@ -6,18 +6,18 @@ public class App {
         System.out.println("SELECT Mode\n JUDGE or CREATE");
         final Mode mode = Mode.valueOf(scan.nextLine());
         final PrimeNumberMethods methods = new PrimeNumberMethods();
-        switch (mode){
-            case JUDGE:
+        switch (mode) {
+            case JUDGE -> {
                 System.out.println("input Number");
                 System.out.println(methods.isPrimeNumber(scan.nextLong()));
-                break;
-            case CREATE:
+            }
+            case CREATE -> {
                 System.out.println("input Number. \n" +
                         "I create a prime number less than or equal to the entered value");
                 System.out.println(methods.createPrimeNumber(scan.nextLong()));
-                break;
-            default:
-                break;
+            }
+            default -> {
+            }
         }
     }
 
